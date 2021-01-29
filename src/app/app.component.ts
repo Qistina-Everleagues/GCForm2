@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'GCForm2';
+
+  opened = false;
+
+  toggleSidebar() {
+    this.opened = !this.opened;
+  }
 }

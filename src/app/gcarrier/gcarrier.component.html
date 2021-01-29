@@ -1,0 +1,1058 @@
+<h1><b>Physicians Surrogacy - Gestational Carrier</b></h1>
+<table>
+    <td><tr><mat-icon style="display: inline-flex; vertical-align: top;">information</mat-icon></tr></td>
+    <td><tr><p>Welcome to Physician's Surrogacy. Thank you for taking the rst step in making a dierence! Surrogate mothers are very special. We are very excited to review your initial application. Once submitted, you will be contacted by a Surrogate Specialist who will guide you through the intake process. If you have any questions, please feel free to contact us at 858-299-4540.</p></tr></td>
+</table>
+
+<form *ngIf="showForm" [formGroup]="gcform2" (ngSubmit)="onSubmit()">
+  <table style="margin-left: 30px; display: inline-block; width: 80%;">
+    <td>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName" required>
+          <mat-error *ngIf="gcform2.controls['firstName'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName" required>
+          <mat-error *ngIf="gcform2.controls['lastName'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="address" required>
+          <mat-error *ngIf="gcform2.controls['address'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>City</mat-label>
+          <input matInput formControlName="city" required>
+          <mat-error *ngIf="gcform2.controls['city'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>State</mat-label>
+          <mat-select formControlName="state" required>
+            <mat-option value="Alabama">AL</mat-option>
+            <mat-option value="Alaska">AK</mat-option>
+            <mat-option value="Arizona">AZ</mat-option>
+            <mat-option value="Arkansas">AR</mat-option>
+            <mat-option value="California">CA</mat-option>
+            <mat-option value="Colorado">CO</mat-option>
+            <mat-option value="Connecticut">CT</mat-option>
+            <mat-option value="Delaware">DE</mat-option>
+            <mat-option value="Florida">FL</mat-option>
+            <mat-option value="Georgia">GA</mat-option>
+            <mat-option value="Hawaii">HI</mat-option>
+            <mat-option value="Idaho">ID</mat-option>
+            <mat-option value="Illinois">IL</mat-option>
+            <mat-option value="Indiana">IN</mat-option>
+            <mat-option value="Iowa">IA</mat-option>
+            <mat-option value="Kansas">KS</mat-option>
+            <mat-option value="Kentucky">KY</mat-option>
+            <mat-option value="Louisiana">LA</mat-option>
+            <mat-option value="Maine">ME</mat-option>
+            <mat-option value="Maryland ">MD</mat-option>
+            <mat-option value="Massachusetts">MA</mat-option>
+            <mat-option value="Michigan">MI</mat-option>
+            <mat-option value="Minnesota">MN</mat-option>
+            <mat-option value="Mississippi">MS</mat-option>
+            <mat-option value="Missouri">MO</mat-option>
+            <mat-option value="Montana">MT</mat-option>
+            <mat-option value="Nebraska">NE</mat-option>
+            <mat-option value="Nevada">NV</mat-option>
+            <mat-option value="New Hampshire">NH</mat-option>
+            <mat-option value="New Jersey">NJ</mat-option>
+            <mat-option value="New Mexico">NM</mat-option>
+            <mat-option value="New York">NY</mat-option>
+            <mat-option value="North Carolina">NC</mat-option>
+            <mat-option value="North Dakota">ND</mat-option>
+            <mat-option value="Ohio">OH</mat-option>
+            <mat-option value="Oklahoma">OK</mat-option>
+            <mat-option value="Oregon">OR</mat-option>
+            <mat-option value="Pennsylvania">PA</mat-option>
+            <mat-option value="Rhode Island">RI</mat-option>
+            <mat-option value="Rhode Island">SC</mat-option>
+            <mat-option value="South Dakota">SD</mat-option>
+            <mat-option value="Tennessee">TN</mat-option>
+            <mat-option value="Texas">TX</mat-option>
+            <mat-option value="Utah">UT</mat-option>
+            <mat-option value="Vermont">VT</mat-option>
+            <mat-option value="Virginia">VA</mat-option>
+            <mat-option value="Washington">WA</mat-option>
+            <mat-option value="West Virginia">WV</mat-option>
+            <mat-option value="Wisconsin">WI</mat-option>
+            <mat-option value="Wyoming">WY</mat-option>
+          </mat-select>
+          <mat-error *ngIf="gcform2.controls['state'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please indicate if outside 0f USA.</mat-label>
+          <textarea matInput formControlName="outside_USA"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Zip Code</mat-label>
+          <input matInput formControlName="zip_code" required>
+          <mat-error *ngIf="gcform2.controls['zip_code'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What is your date of birth?</mat-label>
+          <input formControlName="birthDate" matInput [matDatepicker]="picker" required>
+          <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="gcform2.controls['birthDate'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Age</mat-label>
+          <input matInput formControlName="age" required>
+          <mat-error *ngIf="gcform2.controls['age'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What is your primary phone number?</mat-label>
+          <input matInput formControlName="telephone_number" required>
+          <mat-error *ngIf="gcform2.controls['telephone_number'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What is your email?</mat-label>
+          <input matInput formControlName="email" required>
+          <mat-error *ngIf="gcform2.controls['email'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What is your spouse/partner's name? (or n/a if no partner/spouse)</mat-label>
+          <input matInput formControlName="spouse_name" required>
+          <mat-error *ngIf="gcform2.controls['spouse_name'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What is your spouse/partner's email address? (or n/a)</mat-label>
+          <input matInput formControlName="spouse_email" required>
+          <mat-error *ngIf="gcform2.controls['spouse_email'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What is your height?</mat-label>
+          <input matInput formControlName="height" required>
+          <mat-error *ngIf="gcform2.controls['height'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What is your weight?</mat-label>
+          <input matInput formControlName="weight" required>
+          <mat-error *ngIf="gcform2.controls['weight'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>BMI</mat-label>
+          <input matInput formControlName="bmi" required>
+          <mat-error *ngIf="gcform2.controls['bmi'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What is your citizenship status?</mat-label>
+          <mat-select formControlName="citizenship_status" required>
+            <mat-option value="U.S. Citizen">U.S. Citizen</mat-option>
+            <mat-option value="U.S. National">U.S. National</mat-option>
+            <mat-option value="Lawful Permanent Resident Alien">Lawful Permanent Resident Alien</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+          <mat-error *ngIf="gcform2.controls['citizenship_status'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>If Other, please explain.</mat-label>
+          <textarea matInput formControlName="other_citizenship"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>How many biological children do you have?</mat-label>
+          <mat-select formControlName="bioChildren" required>
+            <mat-option value="N/A">N/A</mat-option>
+            <mat-option value="One">One</mat-option>
+            <mat-option value="Two">Two</mat-option>
+            <mat-option value="Three">Three</mat-option>
+            <mat-option value="Four">Four</mat-option>
+            <mat-option value="Five">Five</mat-option>
+            <mat-option value="Six">Six</mat-option>
+            <mat-option value="Seven">Seven</mat-option>
+            <mat-option value="Eight">Eight</mat-option>
+            <mat-option value="Nine">Nine</mat-option>
+            <mat-option value="Ten">Ten</mat-option>
+          </mat-select>
+          <mat-error *ngIf="gcform2.controls['bioChildren'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What has inspired you to help others to have a family via surrogacy?</mat-label>
+          <textarea matInput formControlName="inspired"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>How did you hear about our center?</mat-label>
+          <mat-select formControlName="hear" required>
+            <mat-option value="Personal Referral (Provide Name)">Personal Referral (Provide Name)</mat-option>
+            <mat-option value="A Friend (Provide Name)">A Friend (Provide Name)</mat-option>
+            <mat-option value="Recruiter (Provide Name)">Recruiter (Provide Name)</mat-option>
+            <mat-option value="Craigslist Ad">Craigslist Ad</mat-option>
+            <mat-option value="Google Ad">Google Ad</mat-option>
+            <mat-option value="Internet Research">Internet Research</mat-option>
+            <mat-option value="Image Ad On a Website">Image Ad On a Website</mat-option>
+            <mat-option value="Bing Ad">Bing Ad</mat-option>
+            <mat-option value="Yahoo Ad">Yahoo Ad</mat-option>
+            <mat-option value="Facebook Post">Facebook Post</mat-option>
+            <mat-option value="Facebook Sponsored Video Ad">Facebook Sponsored Video Ad</mat-option>
+            <mat-option value="Facebook Sponsored Ad">Facebook Sponsored Ad</mat-option>
+            <mat-option value="Instagram Post">Instagram Post</mat-option>
+            <mat-option value="Instagram Sponsored Ad">Instagram Sponsored Ad</mat-option>
+            <mat-option value="Instagram Sponsored Video Ad">Instagram Sponsored Video Ad</mat-option>
+            <mat-option value="Tumblr">Tumblr</mat-option>
+            <mat-option value="Tinder">Tinder</mat-option>
+            <mat-option value="Car Ad">Car Ad</mat-option>
+            <mat-option value="Hungry SD">Hungry SD</mat-option>
+            <mat-option value="Flyer on Campus">Flyer on Campus</mat-option>
+            <mat-option value="Ad in Campus Newspaper">Ad in Campus Newspaper</mat-option>
+            <mat-option value="WeChat">WeChat</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+          <mat-error *ngIf="gcform2.controls['hear'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Coordinator</mat-label>
+          <input matInput formControlName="Coordinator" required>
+          <mat-error *ngIf="gcform2.controls['Coordinator'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you been a surrogate before?</label><br><br>
+          <mat-radio-group formControlName="surrogate" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Tier-Intake Only</mat-label>
+          <input matInput formControlName="Tier" required>
+          <mat-error *ngIf="gcform2.controls['Tier'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr [formGroup]="Form">
+        <mat-label><b>Pap Smear</b></mat-label><br><br>
+        <table id="customers" formGroupName="paps">
+          <ng-container *ngIf="Form.controls.paps!=null">
+            <div *ngFor="let pap of Form.controls.paps.controls; let i=index" [formGroupName]="i">
+              <tr>
+                <td><input matInput formControlName="No" placeholder="No"></td>
+                <td><input matInput formControlName="last_pap" placeholder="When was your last Pap?"></td>
+                <td><input matInput formControlName="result_pap" placeholder="What was the result?"></td>
+                <td><button mat-raised-button color="warn" (click)="deleteRow(i)">X</button></td>
+              </tr>
+            </div>
+          </ng-container>
+        </table>
+        <br>
+        <button mat-raised-button color="Primary" type="button" (click)="addNewRow()" [disabled]="Form.invalid">Add More</button>
+      </tr>
+      <br>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you ever undergone any fertility treatments to become pregnant?</label><br><br>
+          <mat-radio-group formControlName="fertility" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>Total number of pregnancies</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Number</th>
+            <th>Date(s)</th>
+          </tr>
+          <tr>
+            <th>Term Delivery</th>
+            <td><input matInput formControlName="TD_number"></td>
+            <td><input matInput formControlName="TD_date"></td>
+          </tr>
+          <tr>
+            <th>Pre-Term Delivery</th>
+            <td><input matInput formControlName="PT_number"></td>
+            <td><input matInput formControlName="PT_date"></td>
+          </tr>
+          <tr>
+            <th>Spontaneous Miscarriage</th>
+            <td><input matInput formControlName="SM_number"></td>
+            <td><input matInput formControlName="SM_date"></td>
+          </tr>
+          <tr>
+            <th>Elective Abortion</th>
+            <td><input matInput formControlName="EA_number"></td>
+            <td><input matInput formControlName="EA_date"></td>
+          </tr>
+          <tr>
+            <th>Stillbirth</th>
+            <td><input matInput formControlName="S_number"></td>
+            <td><input matInput formControlName="S_date"></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>How many C-sections have you had?</mat-label>
+          <input matInput formControlName="c_sections" required>
+          <mat-error *ngIf="gcform2.controls['c_sections'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please select the most accurate answer in regards to your pregnancies:</mat-label>
+          <mat-select formControlName="pregnancies" required>
+            <mat-option value="N/A">N/A</mat-option>
+            <mat-option value="I delivered one or more times at 34 weeks or less">I delivered one or more times at 34 weeks or less</mat-option>
+            <mat-option value="No, all of my deliveries were between 37-40 weeks">No, all of my deliveries were between 37-40 weeks</mat-option>
+          </mat-select>
+          <mat-error *ngIf="gcform2.controls['pregnancies'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Have you ever had any of the following major complications during pregnancy?</mat-label>
+          <mat-select formControlName="complications" required>
+            <mat-option value="N/A">N/A</mat-option>
+            <mat-option value="Yes">Yes</mat-option>
+            <mat-option value="No, to my knowledge I have not had any major complications during pregnancy.">No, to my knowledge I have not had any major complications during pregnancy.</mat-option>
+          </mat-select>
+          <mat-error *ngIf="gcform2.controls['complications'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>When was your most recent delivery?</mat-label>
+          <mat-select formControlName="recent_delivery" required>
+            <mat-option value="2016 or earlier">2016 or earlier</mat-option>
+            <mat-option value="2017">2017</mat-option>
+            <mat-option value="2018">2018</mat-option>
+            <mat-option value="2019">2019</mat-option>
+            <mat-option value="2020">2020</mat-option>
+          </mat-select>
+          <mat-error *ngIf="gcform2.controls['recent_delivery'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr [formGroup]="Form1">
+        <mat-label><b>Your delivery history.</b></mat-label><br><br>
+        <table id="customers" formGroupName="delivery_historys">
+          <ng-container *ngIf="Form1.controls.delivery_historys!=null">
+            <div *ngFor="let delivery_history of Form1.controls.delivery_historys.controls; let i=index" [formGroupName]="i">
+              <tr>
+                <td><input matInput formControlName="surrogacy" placeholder="Own or Surrogacy"></td>
+                <td><input matInput formControlName="birthDate" placeholder="Date Of Birth"></td>
+                <td><input matInput formControlName="vaginal" placeholder="Vaginal or C-Section"></td>
+                <td><input matInput formControlName="birthWeight" placeholder="Birth Weight"></td>
+                <td><input matInput formControlName="number" placeholder="Number of Weeks Carried"></td>
+                <td><button mat-raised-button color="warn" (click)="deleteRow1(i)">X</button></td>
+              </tr>
+            </div>
+          </ng-container>
+        </table>
+        <br>
+        <button mat-raised-button color="Primary" type="button" (click)="addNewRow1()" [disabled]="Form1.invalid">Add More</button>
+      </tr>
+      <br>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Are you currently breastfeeding?</mat-label>
+          <mat-select formControlName="breastfeeding" required>
+            <mat-option value="N/A">N/A</mat-option>
+            <mat-option value="Yes">Yes</mat-option>
+            <mat-option value="No,  I am not currently breastfeeding.">No,  I am not currently breastfeeding.</mat-option>
+          </mat-select>
+          <mat-error *ngIf="gcform2.controls['breastfeeding'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What is your current form of birth control?</mat-label>
+          <mat-select formControlName="birth_control" required>
+            <mat-option value="Birth control pills">Birth control pills</mat-option>
+            <mat-option value="Depo Shot">Depo Shot</mat-option>
+            <mat-option value="Other (Please Specify)">Other (Please Specify)</mat-option>
+          </mat-select>
+          <mat-error *ngIf="gcform2.controls['birth_control'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>How long have you been using this method? Please explain.</mat-label>
+          <textarea matInput formControlName="explain_method"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-label><b>Past History of long-acting birth control:</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>When Started</th>
+            <th>When Stopped</th>
+          </tr>
+          <tr>
+            <th>Depo-Provera Shot</th>
+            <td><input matInput formControlName="DP_started"></td>
+            <td><input matInput formControlName="DP_stopped"></td>
+          </tr>
+          <tr>
+            <th>IUD (Mirena / Skyla / Liletta)</th>
+            <td><input matInput formControlName="IUD_started"></td>
+            <td><input matInput formControlName="IUD_stopped"></td>
+          </tr>
+          <tr>
+            <th>Nexplanon / Implanon</th>
+            <td><input matInput formControlName="N_started"></td>
+            <td><input matInput formControlName="N_stopped"></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you ever had endometrial ablation?</label><br><br>
+          <mat-radio-group formControlName="endometrial" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <br>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Have you taken any prescribed anti-depression or anti-anxiety medication in the last 12 months?</mat-label>
+          <mat-select formControlName="anti_depression" required>
+            <mat-option value="N/A">N/A</mat-option>
+            <mat-option value="Yes">Yes</mat-option>
+            <mat-option value="No, I have not taken any anti anxiety or anti depression medication in the last year.">No, I have not taken any anti anxiety or anti depression medication in the last year.</mat-option>
+          </mat-select>
+          <mat-error *ngIf="gcform2.controls['anti_depression'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Are you currently diagnosed with any psychological disorders?</label><br><br>
+          <mat-radio-group formControlName="psychological" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>Have you used any of the following in the past year?</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Yes</th>
+            <th>No</th>
+          </tr>
+          <tr>
+            <th>Amphetamines</th>
+            <td><mat-checkbox formControlName="Amphetamines_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Amphetamines_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Barbiturates</th>
+            <td><mat-checkbox formControlName="Barbiturates_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Barbiturates_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Cocaine</th>
+            <td><mat-checkbox formControlName="Cocaine_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Cocaine_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Hallucinogens</th>
+            <td><mat-checkbox formControlName="Hallucinogens_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Hallucinogens_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Heroin</th>
+            <td><mat-checkbox formControlName="Heroin_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Heroin_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>LSD</th>
+            <td><mat-checkbox formControlName="LSD_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="LSD_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Marijuana</th>
+            <td><mat-checkbox formControlName="Marijuana_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Marijuana_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Narcotics</th>
+            <td><mat-checkbox formControlName="Narcotics_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Narcotics_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Opiates</th>
+            <td><mat-checkbox formControlName="Opiates_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Opiates_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>PCP</th>
+            <td><mat-checkbox formControlName="PCP_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="PCP_no"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>How frequently do you drink alcoholic beverages?</mat-label>
+          <input matInput formControlName="alcoholic" required>
+          <mat-error *ngIf="gcform2.controls['alcoholic'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Will you be able to abstain from alcohol throughout your surrogacy journey?</mat-label>
+          <textarea matInput formControlName="explain_alcohol"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Do you smoke?</label><br><br>
+          <mat-radio-group formControlName="smoke" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>Past or present history of the following:</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Yes / No</th>
+          </tr>
+          <tr>
+            <th>Diabetes</th>
+            <td><input matInput formControlName="Diabetes"></td>
+          </tr>
+          <tr>
+            <th>Heart Problems</th>
+            <td><input matInput formControlName="Heart"></td>
+          </tr>
+          <tr>
+            <th>High Blood Pressure</th>
+            <td><input matInput formControlName="High"></td>
+          </tr>
+          <tr>
+            <th>Ovarian Cysts</th>
+            <td><input matInput formControlName="Ovarian"></td>
+          </tr>
+          <tr>
+            <th>Uterine Fibroids</th>
+            <td><input matInput formControlName="Uterine"></td>
+          </tr>
+          <tr>
+            <th>Thyroid Problems</th>
+            <td><input matInput formControlName="Thyroid"></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you had asthmatic symptoms during pregnancy that required treatment?</label><br><br>
+          <mat-radio-group formControlName="asthmatic" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <br>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you ever taken medication for gestational diabetes?</label><br><br>
+          <mat-radio-group formControlName="gestational" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <br>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you had symptoms of migraine headaches during pregnancy that required treatment?</label><br><br>
+          <mat-radio-group formControlName="migraine" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>Any major GYN surgeries involving reproductive organs?</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Yes</th>
+            <th>No</th>
+          </tr>
+          <tr>
+            <th>Ovarian Cystectomy</th>
+            <td><mat-checkbox formControlName="Ovarian_Cystectomy_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Ovarian_Cystectomy_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Fibroid Removal</th>
+            <td><mat-checkbox formControlName="Fibroid_Removal_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Fibroid_Removal_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Salpingectomy</th>
+            <td><mat-checkbox formControlName="Salpingectomy_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Salpingectomy_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Oophorectomy</th>
+            <td><mat-checkbox formControlName="Oophorectomy_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Oophorectomy_no"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Other (please specify)</th>
+            <td><mat-checkbox formControlName="Other_yes"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Other_no"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>Are you or your partner / spouse currently diagnosed with:</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Myself</th>
+            <th>My Partner</th>
+            <th>Neither</th>
+          </tr>
+          <tr>
+            <th>AIDS</th>
+            <td><mat-checkbox formControlName="AIDS_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="AIDS_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="AIDS_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Genital Warts</th>
+            <td><mat-checkbox formControlName="Genital_Warts_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Genital_Warts_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Genital_Warts_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Hepatitis B</th>
+            <td><mat-checkbox formControlName="Hepatitis_B_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Hepatitis_B_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Hepatitis_B_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Hepatitis C</th>
+            <td><mat-checkbox formControlName="Hepatitis_C_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Hepatitis_C_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Hepatitis_C_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Herpes</th>
+            <td><mat-checkbox formControlName="Herpes_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Herpes_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Herpes_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>HIV</th>
+            <td><mat-checkbox formControlName="HIV_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="HIV_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="HIV_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>HPV</th>
+            <td><mat-checkbox formControlName="HPV_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="HPV_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="HPV_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Syphilis</th>
+            <td><mat-checkbox formControlName="Syphilis_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Syphilis_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Syphilis_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Trichomonas</th>
+            <td><mat-checkbox formControlName="Trichomonas_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Trichomonas_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Trichomonas_None"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>Within the last year, have you or your partner/spouse been diagnosed with the following:</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Myself</th>
+            <th>My Partner</th>
+            <th>Neither</th>
+          </tr>
+          <tr>
+            <th>Chlamydia</th>
+            <td><mat-checkbox formControlName="Chlamydia_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Chlamydia_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Chlamydia_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Gonorrhea</th>
+            <td><mat-checkbox formControlName="Gonorrhea_Warts_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Gonorrhea_Warts_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Gonorrhea_Warts_None"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Are you currently covered by medical insurance? If so, who is your provider? (If not applicable, put N/A)</mat-label>
+          <input matInput formControlName="insurance" required>
+          <mat-error *ngIf="gcform2.controls['insurance'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-label><b>What is your ethnic heritage? (Check all that apply)</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Mother's Side</th>
+            <th>Father's Side</th>
+          </tr>
+          <tr>
+            <th>Asian</th>
+            <td><mat-checkbox formControlName="Asian_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Asian_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Black or African American</th>
+            <td><mat-checkbox formControlName="Black_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Black_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Hispanic or Latino</th>
+            <td><mat-checkbox formControlName="Latino_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Latino_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Native American</th>
+            <td><mat-checkbox formControlName="Native_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Native_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>German</th>
+            <td><mat-checkbox formControlName="German_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="German_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>French</th>
+            <td><mat-checkbox formControlName="French_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="French_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Irish</th>
+            <td><mat-checkbox formControlName="Irish_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Irish_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Italian</th>
+            <td><mat-checkbox formControlName="Italian_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Italian_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Pacific Islander</th>
+            <td><mat-checkbox formControlName="Pacific_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Pacific_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Cherokee</th>
+            <td><mat-checkbox formControlName="Cherokee_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Cherokee_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Caucasian</th>
+            <td><mat-checkbox formControlName="Caucasian_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Caucasian_father"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Other</th>
+            <td><mat-checkbox formControlName="Other_mother"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Other_father"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Due to tribal laws, we need to ascertain whether or not you (or any immediate family members) have Native American heritage. Is anyone in your immediate family affiliated with any tribes or reservations?</label><br><br>
+          <mat-radio-group formControlName="tribal" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <br>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What is your highest level of completed education?</mat-label>
+          <mat-select formControlName="highest_level_education" required>
+            <mat-option value="None">None</mat-option>
+            <mat-option value="Some High School">Some High School</mat-option>
+            <mat-option value="GED">GED</mat-option>
+            <mat-option value="High School Diploma">High School Diploma</mat-option>
+            <mat-option value="Some Trade School">Some Trade School</mat-option>
+            <mat-option value="Trade School Diploma">Trade School Diploma</mat-option>
+            <mat-option value="Some College">Some College</mat-option>
+            <mat-option value="Currently in College">Currently in College</mat-option>
+            <mat-option value="2 Year College Degree">2 Year College Degree</mat-option>
+            <mat-option value="4 Year College Degree">4 Year College Degree</mat-option>
+            <mat-option value="Some Advanced Degree College">Some Advanced Degree College</mat-option>
+            <mat-option value="Masters Degree">Masters Degree</mat-option>
+            <mat-option value="Ph. D. Degree">Ph. D. Degree</mat-option>
+            <mat-option value="MD or DO Degree">MD or DO Degree</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Occupation, if employed.</mat-label>
+          <input matInput formControlName="Occupation" required>
+          <mat-error *ngIf="gcform2.controls['Occupation'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Will you be able to attend OB appointments and other appointments related to the surrogacy journey with your current work schedule?</label><br><br>
+          <mat-radio-group formControlName="appointments" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <br>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Are you exposed to severe levels of smoke at your place of work or at your home?</label><br><br>
+          <mat-radio-group formControlName="exposed" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <br>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>If yes, please explain.</mat-label>
+          <textarea matInput formControlName="explain_exposed"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Do you have a valid drivers license?</mat-label>
+          <mat-select formControlName="drivers_license" required>
+            <mat-option value="Yes">Yes</mat-option>
+            <mat-option value="No">No</mat-option>
+            <mat-option value="N/A">N/A</mat-option>
+          </mat-select>
+          <mat-error *ngIf="gcform2.controls['drivers_license'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Do you have reliable transportation?</mat-label>
+          <mat-select formControlName="transportation" required>
+            <mat-option value="Yes">Yes</mat-option>
+            <mat-option value="No">No</mat-option>
+            <mat-option value="N/A">N/A</mat-option>
+          </mat-select>
+          <mat-error *ngIf="gcform2.controls['transportation'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr [formGroup]="Form2">
+        <mat-label><b>List all of your residences within the last 5 years</b></mat-label><br><br>
+        <table id="customers" formGroupName="residences">
+          <ng-container *ngIf="Form2.controls.residences!=null">
+            <div *ngFor="let residence of Form2.controls.residences.controls; let i=index" [formGroupName]="i">
+              <tr>
+                <td><input matInput formControlName="no" placeholder="No"></td>
+                <td><input matInput formControlName="address" placeholder="Street Address"></td>
+                <td><input matInput formControlName="city" placeholder="City, State, Zip code"></td>
+                <td><input matInput formControlName="years" placeholder="Years resided at this location"></td>
+                <td><button mat-raised-button color="warn" (click)="deleteRow2(i)">X</button></td>
+              </tr>
+            </div>
+          </ng-container>
+        </table>
+        <br>
+        <button mat-raised-button color="Primary" type="button" (click)="addNewRow2()" [disabled]="Form2.invalid">Add More</button>
+      </tr>
+      <br>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What does your partner/spouse do for a living?</mat-label>
+          <input matInput formControlName="living" required>
+          <mat-error *ngIf="gcform2.controls['living'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Are you currently in a relationship?</mat-label>
+          <input matInput formControlName="relationship" required>
+          <mat-error *ngIf="gcform2.controls['relationship'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What is your legal marital status?</mat-label>
+          <mat-select formControlName="marital_status" required>
+            <mat-option value="Single">Single</mat-option>
+            <mat-option value="Single (in relationship)">Single (in relationship)</mat-option>
+            <mat-option value="Engaged">Engaged</mat-option>
+            <mat-option value="Married">Married</mat-option>
+            <mat-option value="Separated">Separated</mat-option>
+            <mat-option value="Divorced">Divorced</mat-option>
+            <mat-option value="Partnered">Partnered</mat-option>
+            <mat-option value="Widowed">Widowed</mat-option>
+          </mat-select>
+          <mat-error *ngIf="gcform2.controls['marital_status'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please list everyone living in your home, including age and relation to you:</mat-label>
+          <textarea matInput formControlName="living_home"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Who will be your main support person through your surrogacy?</mat-label>
+          <input matInput formControlName="support" required>
+          <mat-error *ngIf="gcform2.controls['support'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-label><b>Please complete the following:</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Yes / No</th>
+          </tr>
+          <tr>
+            <th>Do you currently have any major legal cases or claims pending?</th>
+            <td><input matInput formControlName="legal_cases"></td>
+          </tr>
+          <tr>
+            <th>Have you had any active restraining orders in the last year?</th>
+            <td><input matInput formControlName="restraining"></td>
+          </tr>
+          <tr>
+            <th>Are you currently filing for divorce or legal separation?</th>
+            <td><input matInput formControlName="divorce"></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What is your full legal name?</mat-label>
+          <input matInput formControlName="legal_name" required>
+          <mat-error *ngIf="gcform2.controls['legal_name'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please list any other complete names you have used in the past, including maiden name. Enter "n/a" if you haven't used any other names.</mat-label>
+          <textarea matInput formControlName="complete_names"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Are you exposed to severe levels of smoke at your place of work or at your home?</label><br><br>
+          <mat-radio-group formControlName="exposed" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <br>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Have you ever been convicted of a felony?</mat-label>
+          <mat-select formControlName="felony" required>
+            <mat-option value="N/A">N/A</mat-option>
+            <mat-option value="Yes">Yes</mat-option>
+            <mat-option value="No">No</mat-option>
+          </mat-select>
+          <mat-error *ngIf="gcform2.controls['felony'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Has your partner/spouse ever been convicted of a felony?</mat-label>
+          <mat-select formControlName="partner_felony" required>
+            <mat-option value="N/A">N/A</mat-option>
+            <mat-option value="Yes">Yes</mat-option>
+            <mat-option value="No">No</mat-option>
+          </mat-select>
+          <mat-error *ngIf="gcform2.controls['partner_felony'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+    </td>
+    <!-- <td style="padding: 50px;">
+    </td> -->
+  </table>
+  <div style="margin-left: 30px;" class="button-row">
+    <button mat-raised-button class="my-class" color="warn" type="save_progress">SAVE PROGRESS <mat-icon>save</mat-icon></button>
+    <button mat-raised-button class="my-class" color="warn" type="submit" [disabled]="!gcform2.valid">SUBMIT <mat-icon>task_alt</mat-icon></button>
+  </div>
+</form>
