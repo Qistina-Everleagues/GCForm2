@@ -110,57 +110,54 @@ export class GcarrierComponent implements OnInit {
   }
 
   gcform2: FormGroup = new FormGroup ({
-    firstName: new FormControl('', Validators.required),
-    lastName: new FormControl('', Validators.required),
-    address: new FormControl('', Validators.required),
-    city: new FormControl('', Validators.required),
-    state: new FormControl(0, Validators.required),
-    outside_USA: new FormControl('', Validators.required),
-    zip_code: new FormControl('', Validators.required),
-    birthDate: new FormControl('', Validators.required),
-    age: new FormControl('', Validators.required),
-    telephone_number: new FormControl('', Validators.required),
-    email: new FormControl('', Validators.required),
-    spouse_name: new FormControl('', Validators.required),
-    spouse_email: new FormControl('', Validators.required),
-    height: new FormControl('', Validators.required),
-    weight: new FormControl('', Validators.required),
-    bmi: new FormControl('', Validators.required),
-    citizenship_status: new FormControl(0, Validators.required),
-    other_citizenship: new FormControl('', Validators.required),
-    bioChildren: new FormControl(0, Validators.required),
-    inspired: new FormControl('', Validators.required),
-    hear: new FormControl(0, Validators.required),
-    Coordinator: new FormControl('', Validators.required),
-    surrogate: new FormControl('', Validators.required),
-    Tier: new FormControl('', Validators.required),
-    fertility: new FormControl('', Validators.required),
-    TD_number: new FormControl('', Validators.required),
-    TD_date: new FormControl('', Validators.required),
-    PT_number: new FormControl('', Validators.required),
-    PT_date: new FormControl('', Validators.required),
-    SM_number: new FormControl('', Validators.required),
-    SM_date: new FormControl('', Validators.required),
-    EA_number: new FormControl('', Validators.required),
-    EA_date: new FormControl('', Validators.required),
-    S_number: new FormControl('', Validators.required),
-    S_date: new FormControl('', Validators.required),
-    c_sections: new FormControl('', Validators.required),
-    pregnancies: new FormControl(0, Validators.required),
-    complications: new FormControl(0, Validators.required),
-    recent_delivery: new FormControl(0, Validators.required),
-    breastfeeding: new FormControl(0, Validators.required),
-    birth_control: new FormControl(0, Validators.required),
-    explain_method: new FormControl('', Validators.required),
-    DP_started: new FormControl('', Validators.required),
-    DP_stopped: new FormControl('', Validators.required),
-    IUD_started: new FormControl('', Validators.required),
-    IUD_stopped: new FormControl('', Validators.required),
-    N_started: new FormControl('', Validators.required),
-    N_stopped: new FormControl('', Validators.required),
-    endometrial: new FormControl('', Validators.required),
-    anti_depression: new FormControl(0, Validators.required),
-    psychological: new FormControl('', Validators.required),
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    photos: new FormControl('', Validators.required),
+    address: new FormControl(''),
+    city: new FormControl(''),
+    state: new FormControl(0),
+    state_fill: new FormControl(''),
+    outside_USA: new FormControl(''),
+    zip_code: new FormControl(''),
+    birthDate: new FormControl(''),
+    age: new FormControl(''),
+    telephone_number: new FormControl(''),
+    email: new FormControl(''),
+    spouse_name: new FormControl(''),
+    spouse_email: new FormControl(''),
+    citizenship_status: new FormControl(0),
+    other_citizenship: new FormControl(''),
+    bioChildren: new FormControl(0),
+    inspired: new FormControl(''),
+    hear: new FormControl(0),
+    Coordinator: new FormControl(''),
+    surrogate: new FormControl(''),
+    TD_number: new FormControl(''),
+    TD_date: new FormControl(''),
+    PT_number: new FormControl(''),
+    PT_date: new FormControl(''),
+    SM_number: new FormControl(''),
+    SM_date: new FormControl(''),
+    EA_number: new FormControl(''),
+    EA_date: new FormControl(''),
+    S_number: new FormControl(''),
+    S_date: new FormControl(''),
+    c_sections: new FormControl(''),
+    pregnancies: new FormControl(0),
+    complications: new FormControl(0),
+    recent_delivery: new FormControl(0),
+    breastfeeding: new FormControl(0),
+    birth_control: new FormControl(0),
+    explain_method: new FormControl(''),
+    DP_started: new FormControl(''),
+    DP_stopped: new FormControl(''),
+    IUD_started: new FormControl(''),
+    IUD_stopped: new FormControl(''),
+    N_started: new FormControl(''),
+    N_stopped: new FormControl(''),
+    endometrial: new FormControl(''),
+    anti_depression: new FormControl(0),
+    psychological: new FormControl(''),
     Amphetamines_yes: new FormControl(false),
     Amphetamines_no: new FormControl(false),
     Barbiturates_yes: new FormControl(false),
@@ -181,28 +178,28 @@ export class GcarrierComponent implements OnInit {
     Opiates_no: new FormControl(false),
     PCP_yes: new FormControl(false),
     PCP_no: new FormControl(false),
-    alcoholic: new FormControl('', Validators.required),
-    explain_alcohol: new FormControl('', Validators.required),
-    smoke: new FormControl('', Validators.required),
-    Diabetes: new FormControl('', Validators.required),
-    Heart: new FormControl('', Validators.required),
-    High: new FormControl('', Validators.required),
-    Ovarian: new FormControl('', Validators.required),
-    Uterine: new FormControl('', Validators.required),
-    Thyroid: new FormControl('', Validators.required),
-    asthmatic: new FormControl('', Validators.required),
-    gestational: new FormControl('', Validators.required),
-    migraine: new FormControl('', Validators.required),
-    Ovarian_Cystectomy_yes: new FormControl('', Validators.required),
-    Ovarian_Cystectomy_no: new FormControl('', Validators.required),
-    Fibroid_Removal_yes: new FormControl('', Validators.required),
-    Fibroid_Removal_no: new FormControl('', Validators.required),
-    Salpingectomy_yes: new FormControl('', Validators.required),
-    Salpingectomy_no: new FormControl('', Validators.required),
-    Oophorectomy_yes: new FormControl('', Validators.required),
-    Oophorectomy_no: new FormControl('', Validators.required),
-    Other_yes: new FormControl('', Validators.required),
-    Other_no: new FormControl('', Validators.required),
+    alcoholic: new FormControl(''),
+    explain_alcohol: new FormControl(''),
+    smoke: new FormControl(''),
+    Diabetes: new FormControl(''),
+    Heart: new FormControl(''),
+    High: new FormControl(''),
+    Ovarian: new FormControl(''),
+    Uterine: new FormControl(''),
+    Thyroid: new FormControl(''),
+    asthmatic: new FormControl(''),
+    gestational: new FormControl(''),
+    migraine: new FormControl(''),
+    Ovarian_Cystectomy_yes: new FormControl(''),
+    Ovarian_Cystectomy_no: new FormControl(''),
+    Fibroid_Removal_yes: new FormControl(''),
+    Fibroid_Removal_no: new FormControl(''),
+    Salpingectomy_yes: new FormControl(''),
+    Salpingectomy_no: new FormControl(''),
+    Oophorectomy_yes: new FormControl(''),
+    Oophorectomy_no: new FormControl(''),
+    Other_yes: new FormControl(''),
+    Other_no: new FormControl(''),
     AIDS_Me: new FormControl(false),
     AIDS_Partner: new FormControl(false),
     AIDS_None: new FormControl(false),
@@ -236,7 +233,7 @@ export class GcarrierComponent implements OnInit {
     Gonorrhea_Warts_Me: new FormControl(false),
     Gonorrhea_Warts_Partner: new FormControl(false),
     Gonorrhea_Warts_None: new FormControl(false),
-    insurance: new FormControl('', Validators.required),
+    insurance: new FormControl(''),
     Asian_mother: new FormControl(false),
     Asian_father: new FormControl(false),
     Black_mother: new FormControl(false),
@@ -261,24 +258,24 @@ export class GcarrierComponent implements OnInit {
     Caucasian_father: new FormControl(false),
     Other_mother: new FormControl(false),
     Other_father: new FormControl(false),
-    tribal: new FormControl('', Validators.required),
-    highest_level_education: new FormControl(0, Validators.required),
-    Occupation: new FormControl('', Validators.required),
-    appointments: new FormControl('', Validators.required),
-    exposed: new FormControl('', Validators.required),
-    explain_exposed: new FormControl('', Validators.required),
-    drivers_license: new FormControl(0, Validators.required),
-    transportation: new FormControl(0, Validators.required),
-    living: new FormControl('', Validators.required),
-    relationship: new FormControl('', Validators.required),
-    marital_status: new FormControl(0, Validators.required),
-    living_home: new FormControl('', Validators.required),
-    support: new FormControl('', Validators.required),
-    legal_cases: new FormControl('', Validators.required),
-    restraining: new FormControl('', Validators.required),
-    divorce: new FormControl('', Validators.required),
-    legal_name: new FormControl('', Validators.required),
-    complete_names: new FormControl('', Validators.required),
+    tribal: new FormControl(''),
+    highest_level_education: new FormControl(0),
+    Occupation: new FormControl(''),
+    appointments: new FormControl(''),
+    exposed: new FormControl(''),
+    explain_exposed: new FormControl(''),
+    drivers_license: new FormControl(0),
+    transportation: new FormControl(0),
+    living: new FormControl(''),
+    relationship: new FormControl(''),
+    marital_status: new FormControl(0),
+    living_home: new FormControl(''),
+    support: new FormControl(''),
+    legal_cases: new FormControl(''),
+    restraining: new FormControl(''),
+    divorce: new FormControl(''),
+    legal_name: new FormControl(''),
+    complete_names: new FormControl(''),
     felony: new FormControl(0, Validators.required),
     partner_felony: new FormControl(0, Validators.required)
   });
@@ -291,4 +288,67 @@ export class GcarrierComponent implements OnInit {
       }) */
     }
   }
+
+  cal_bmi(lbs, ins)
+  {
+    let h2 = ins * ins;
+    let bmi: any = lbs/h2 * 703;
+    let f_bmi = Math.floor(bmi);
+    let diff  = bmi - f_bmi;
+    diff = diff * 10;
+    diff = Math.round(diff);
+    if (diff == 10)
+    {
+      f_bmi += 1;
+      diff   = 0;
+    }
+    bmi = f_bmi + "." + diff;
+    return bmi;
+  }
+
+  compute()
+  {
+    var f = self.document.forms[0];
+    let w = f.wt.value;
+    let v = f.htf.value;
+    let u = f.hti.value;
+    if (!this.chkw(u))
+    {
+    var ii = 0;
+    f.hti.value = 0;
+    } else
+    {
+    let it = f.hti.value*1;
+    var ii = it;
+    }
+    var fi = f.htf.value * 12;
+    var i =  f.htf.value * 12 + f.hti.value*1.0;  
+    if (!this.chkw(v))
+    {
+    alert("Please enter a number for your height.");
+    f.htf.focus();
+    return;
+    }
+    if (!this.chkw(w))
+    {
+    alert("Please enter a number for your weight.");
+    f.wt.focus();
+    return;
+    }
+    // Perform the calculation
+    f.bmi.value = this.cal_bmi(w, i);
+    f.bmi.focus();
+  }
+
+  chkw(w){
+    if (isNaN(parseInt(w))){
+      return false;
+    } else if (w < 0){
+      return false;
+    }
+    else{
+      return true;
+    }
+  }
+
 }
