@@ -299,11 +299,11 @@ MIT
 
 @angular/material/datepicker
 
+@angular/material/icon
+
 @angular/material/radio
 
 @angular/material/checkbox
-
-@angular/material/icon
 
 @angular/material/sidenav
 
