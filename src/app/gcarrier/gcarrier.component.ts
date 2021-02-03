@@ -109,6 +109,9 @@ export class GcarrierComponent implements OnInit {
     }
   }
 
+  felony = new FormControl('', [Validators.required]);
+  partner_felony = new FormControl('', [Validators.required]);
+
   gcform2: FormGroup = new FormGroup ({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
@@ -276,8 +279,6 @@ export class GcarrierComponent implements OnInit {
     divorce: new FormControl(''),
     legal_name: new FormControl(''),
     complete_names: new FormControl(''),
-    felony: new FormControl(0, Validators.required),
-    partner_felony: new FormControl(0, Validators.required)
   });
 
   onSubmit() {

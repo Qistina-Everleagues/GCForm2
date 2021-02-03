@@ -103,7 +103,7 @@
             <tr>
               <mat-form-field class="my-class" appearance="outline">
                 <mat-label>State</mat-label>
-                <input matInput formControlName="state_fill">
+                <input matInput formControlName="state_fill" maxlength="50">
               </mat-form-field>
             </tr>
           </td>
@@ -290,6 +290,7 @@
           </mat-radio-group>
         </div>
       </tr>
+      <br>
       <tr [formGroup]="Form">
         <mat-label><b>Pap Smear</b></mat-label><br><br>
         <table id="customers" formGroupName="paps">
@@ -1023,23 +1024,23 @@
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>Have you ever been convicted of a felony?</mat-label>
-          <mat-select formControlName="felony" required>
+          <mat-select [formControl]="felony" required>
             <mat-option value="N/A">N/A</mat-option>
             <mat-option value="Yes">Yes</mat-option>
             <mat-option value="No">No</mat-option>
           </mat-select>
-          <mat-error *ngIf="gcform2.controls['felony'].errors?.required">This field is required.</mat-error>
+          <mat-error *ngIf="felony.hasError('required')">This field is required.</mat-error>
         </mat-form-field>
       </tr>
       <tr>
         <mat-form-field appearance="outline">
           <mat-label>Has your partner/spouse ever been convicted of a felony?</mat-label>
-          <mat-select formControlName="partner_felony" required>
+          <mat-select [formControl]="partner_felony" required>
             <mat-option value="N/A">N/A</mat-option>
             <mat-option value="Yes">Yes</mat-option>
             <mat-option value="No">No</mat-option>
           </mat-select>
-          <mat-error *ngIf="gcform2.controls['partner_felony'].errors?.required">This field is required.</mat-error>
+          <mat-error *ngIf="partner_felony.hasError('required')">This field is required.</mat-error>
         </mat-form-field>
       </tr>
     </td>
