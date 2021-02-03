@@ -1,39 +1,44 @@
-<h1><b>Physicians Surrogacy - Gestational Carrier</b></h1>
+<h1><b>&lt;Org Name&gt; - Gestational Carrier</b></h1>
 <table>
     <td><tr><mat-icon style="display: inline-flex; vertical-align: top;">information</mat-icon></tr></td>
-    <td><tr><p>Welcome to Physician's Surrogacy. Thank you for taking the first step in making a difference! Surrogate mothers are very special. We are very excited to review your initial application. Once submitted, you will be contacted by a Surrogate Specialist who will guide you through the intake process. If you have any questions, please feel free to contact us at 858-299-4540.</p></tr></td>
+    <td><tr><p>Welcome to &lt;Org Name&gt;. Thank you for taking the first step in making a difference! Surrogate mothers are very special. We are very excited to review your initial application. Once submitted, you will be contacted by a Surrogate Specialist who will guide you through the intake process. If you have any questions, please feel free to contact us at 858-299-4540.</p></tr></td>
 </table>
 
 <form *ngIf="showForm" [formGroup]="gcform2" (ngSubmit)="onSubmit()">
-  <table style="margin-left: 30px; display: inline-block; width: 80%;">
+  <table style="margin-left: 30px; display: inline-block; width: 900px;">
     <td>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>1. First Name</b></mat-label><br>
+        <mat-form-field style="margin-left: 15px;" appearance="outline">
           <mat-label>First Name</mat-label>
           <input matInput formControlName="firstName" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>2. Last Name</b></mat-label><br>
+        <mat-form-field style="margin-left: 15px;" appearance="outline">
           <mat-label>Last Name</mat-label>
           <input matInput formControlName="lastName" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>3. Please upload at least 2 photos of yourself</b></mat-label><br>
+        <mat-form-field style="margin-left: 15px;" appearance="outline">
           <mat-label>Please upload at least 2 photos of yourself</mat-label>
           <input matInput formControlName="photos" maxlength="50" required>
           <mat-error *ngIf="gcform2.controls['photos'].errors?.required">This field is required.</mat-error>
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>4. Address</b></mat-label><br>
+        <mat-form-field style="margin-left: 15px;" appearance="outline">
           <mat-label>Address</mat-label>
           <input matInput formControlName="address">
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>5. City</b></mat-label><br>
+        <mat-form-field style="margin-left: 15px;" appearance="outline">
           <mat-label>City</mat-label>
           <input matInput formControlName="city">
         </mat-form-field>
@@ -42,7 +47,8 @@
         <table>
           <td>
             <tr>
-              <mat-form-field class="my-class" appearance="outline">
+              <mat-label><b>6. State</b></mat-label><br>
+              <mat-form-field style="margin-left: 15px;" class="my-class" appearance="outline">
                 <mat-label>State</mat-label>
                 <mat-select formControlName="state">
                   <mat-option value="Alabama">AL</mat-option>
@@ -101,7 +107,8 @@
           </td>
           <td>
             <tr>
-              <mat-form-field class="my-class" appearance="outline">
+              <mat-label><b>7. State</b></mat-label><br>
+              <mat-form-field style="margin-left: 15px;" class="my-class" appearance="outline">
                 <mat-label>State</mat-label>
                 <input matInput formControlName="state_fill" maxlength="50">
               </mat-form-field>
@@ -110,18 +117,21 @@
         </table>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>8. Please indicate if outside of USA</b></mat-label><br>
+        <mat-form-field style="margin-left: 15px;" appearance="outline">
           <mat-label>Please indicate if outside of USA</mat-label>
           <textarea matInput formControlName="outside_USA" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>9. Zip Code</b></mat-label><br>
+        <mat-form-field class="my-class" style="margin-left: 15px;" appearance="outline">
           <mat-label>Zip Code</mat-label>
           <input matInput formControlName="zip_code" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>10. What is your date of birth?</b></mat-label><br>
         <mat-form-field class="my-class" appearance="outline">
           <mat-label>What is your date of birth?</mat-label>
           <input formControlName="birthDate" matInput [matDatepicker]="picker">
@@ -130,30 +140,35 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>11. Age</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Age</mat-label>
           <input matInput formControlName="age" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>12. What is your primary phone number?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>What is your primary phone number?</mat-label>
           <input matInput formControlName="telephone_number" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>13. What is your email?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>What is your email?</mat-label>
           <input matInput formControlName="email" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>14. What is your spouse/partner's name? (or n/a if no partner/spouse)</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>What is your spouse/partner's name? (or n/a if no partner/spouse)</mat-label>
           <input matInput formControlName="spouse_name">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>15. What is your spouse/partner's email address? (or n/a)</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>What is your spouse/partner's email address? (or n/a)</mat-label>
           <input matInput formControlName="spouse_email">
@@ -163,6 +178,7 @@
         <table>
           <td>
             <tr>
+              <mat-label><b>16. Height (feet)</b></mat-label><br>
               <mat-form-field class="my-class" appearance="outline">
                 <mat-label for="height_feet">Height</mat-label>
                 <input matInput type="text" name="htf" size="3" id="height_feet">
@@ -172,6 +188,7 @@
           </td>
           <td>
             <tr>
+              <mat-label><b>17. Height (inches)</b></mat-label><br>
               <mat-form-field class="my-class" appearance="outline">
                 <mat-label for="height_inches">Height</mat-label>
                 <input matInput type="text" name="hti" size="3" id="height_inches">
@@ -184,6 +201,7 @@
       <table>
         <td>
           <tr>
+            <mat-label><b>18. Weight</b></mat-label><br>
             <mat-form-field class="my-class" appearance="outline">
               <mat-label for="your_weight">Weight</mat-label>
               <input matInput type="text" name="wt" size="3" id="your_weight">
@@ -193,18 +211,20 @@
         </td>
         <td>
           <tr>
-        <button mat-raised-button (click)="this.compute()" class="bmi" color="warn" type="button">Compute BMI <mat-icon>cached</mat-icon></button>
-      </tr>
+            <br><br>
+            <button mat-raised-button style="margin-left: 15px;" (click)="this.compute()" class="bmi" color="warn" type="button">Compute BMI <mat-icon>cached</mat-icon></button>
+          </tr>
         </td>
       </table>
       <tr>
         <mat-label for="yourbmi">
-          <span style="font-size: .9em; font-weight:bold;">BMI: </span>
+          <span style="font-size: 16px; font-weight:bold;"><b>19. BMI: </b></span>
         </mat-label>
         <input name="bmi" type="text" size="16" id="yourbmi" style="text-align: center"/>
       </tr>
       <br>
       <tr>
+        <mat-label><b>20. What is your citizenship status?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>What is your citizenship status?</mat-label>
           <mat-select formControlName="citizenship_status">
@@ -216,12 +236,14 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>21. If Other, please explain</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>If Other, please explain</mat-label>
           <textarea matInput formControlName="other_citizenship" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>22. How many biological children do you have?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>How many biological children do you have?</mat-label>
           <mat-select formControlName="bioChildren">
@@ -240,12 +262,14 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>23. What has inspired you to help others to have a family via surrogacy?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>What has inspired you to help others to have a family via surrogacy?</mat-label>
           <textarea matInput formControlName="inspired" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>24. How did you hear about our center?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>How did you hear about our center?</mat-label>
           <mat-select formControlName="hear">
@@ -276,6 +300,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>25. Coordinator</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Coordinator</mat-label>
           <input matInput formControlName="Coordinator" maxlength="50">
@@ -283,8 +308,8 @@
       </tr>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you been a surrogate before?</label><br><br>
-          <mat-radio-group formControlName="surrogate">
+          <label><b>26. Have you been a surrogate before?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="surrogate">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
@@ -292,8 +317,8 @@
       </tr>
       <br>
       <tr [formGroup]="Form">
-        <mat-label><b>Pap Smear</b></mat-label><br><br>
-        <table id="customers" formGroupName="paps">
+        <mat-label><b>27. Pap Smear</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers" formGroupName="paps">
           <ng-container *ngIf="Form.controls.paps!=null">
             <div *ngFor="let pap of Form.controls.paps.controls; let i=index" [formGroupName]="i">
               <tr>
@@ -306,12 +331,12 @@
           </ng-container>
         </table>
         <br>
-        <button mat-raised-button color="Primary" type="button" (click)="addNewRow()" [disabled]="Form.invalid">Add More</button>
+        <button style="margin-left: 25px;" mat-raised-button color="Primary" type="button" (click)="addNewRow()" [disabled]="Form.invalid">Add More</button>
       </tr>
       <br>
       <tr>
-        <mat-label><b>Total number of pregnancies</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>28. Total number of pregnancies</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>Number</th>
@@ -346,14 +371,16 @@
       </tr>
       <br>
       <tr>
+        <mat-label><b>29. How many C-sections have you had?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>How many C-sections have you had?</mat-label>
           <input matInput formControlName="c_sections" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>30. Please select the most accurate answer in regards to your pregnancies:</b></mat-label><br>
         <mat-form-field appearance="outline">
-          <mat-label>Please select the most accurate answer in regards to your pregnancies:</mat-label>
+          <mat-label>Please select the most accurate answer in regards to your pregnancies</mat-label>
           <mat-select formControlName="pregnancies">
             <mat-option value="N/A">N/A</mat-option>
             <mat-option value="I delivered one or more times at 34 weeks or less">I delivered one or more times at 34 weeks or less</mat-option>
@@ -362,6 +389,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>31. Have you ever had any of the following major complications during pregnancy?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Have you ever had any of the following major complications during pregnancy?</mat-label>
           <mat-select formControlName="complications">
@@ -372,6 +400,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>32. When was your most recent delivery?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>When was your most recent delivery?</mat-label>
           <mat-select formControlName="recent_delivery">
@@ -384,8 +413,8 @@
         </mat-form-field>
       </tr>
       <tr [formGroup]="Form1">
-        <mat-label><b>Your delivery history.</b></mat-label><br><br>
-        <table id="customers" formGroupName="delivery_historys">
+        <mat-label><b>33. Your delivery history</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers" formGroupName="delivery_historys">
           <ng-container *ngIf="Form1.controls.delivery_historys!=null">
             <div *ngFor="let delivery_history of Form1.controls.delivery_historys.controls; let i=index" [formGroupName]="i">
               <tr>
@@ -400,10 +429,11 @@
           </ng-container>
         </table>
         <br>
-        <button mat-raised-button color="Primary" type="button" (click)="addNewRow1()" [disabled]="Form1.invalid">Add More</button>
+        <button style="margin-left: 25px;" mat-raised-button color="Primary" type="button" (click)="addNewRow1()" [disabled]="Form1.invalid">Add More</button>
       </tr>
       <br>
       <tr>
+        <mat-label><b>34. Are you currently breastfeeding?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Are you currently breastfeeding?</mat-label>
           <mat-select formControlName="breastfeeding">
@@ -414,6 +444,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>35. What is your current form of birth control?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>What is your current form of birth control?</mat-label>
           <mat-select formControlName="birth_control">
@@ -424,14 +455,15 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>36. How long have you been using this method? Please explain</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>How long have you been using this method? Please explain</mat-label>
           <textarea matInput formControlName="explain_method" maxlength="5000"></textarea>
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>Past History of long-acting birth control:</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>37. Past History of long-acting birth control:</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>When Started</th>
@@ -457,8 +489,8 @@
       <br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you ever had endometrial ablation?</label><br><br>
-          <mat-radio-group formControlName="endometrial">
+          <label><b>38. Have you ever had endometrial ablation?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="endometrial">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
@@ -466,6 +498,7 @@
       </tr>
       <br>
       <tr>
+        <mat-label><b>39. Have you taken any prescribed anti-depression or anti-anxiety medication in the last 12 months?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Have you taken any prescribed anti-depression or anti-anxiety medication in the last 12 months?</mat-label>
           <mat-select formControlName="anti_depression">
@@ -477,8 +510,8 @@
       </tr>
       <tr>
         <div class="add-bottom-padding">
-          <label>Are you currently diagnosed with any psychological disorders?</label><br><br>
-          <mat-radio-group formControlName="psychological">
+          <label><b>40. Are you currently diagnosed with any psychological disorders?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="psychological">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
@@ -486,73 +519,75 @@
       </tr>
       <br>
       <tr>
-        <mat-label><b>Have you used any of the following in the past year?</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>41. Have you used any of the following in the past year?</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
-            <th></th>
-            <th>Yes</th>
-            <th>No</th>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Yes</th>
+            <th style="width: 200px;">No</th>
           </tr>
           <tr>
-            <th>Amphetamines</th>
-            <td><mat-checkbox formControlName="Amphetamines_yes"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Amphetamines_no"></mat-checkbox></td>
+            <th style="width: 200px;">Amphetamines</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Amphetamines_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Amphetamines_no"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Barbiturates</th>
-            <td><mat-checkbox formControlName="Barbiturates_yes"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Barbiturates_no"></mat-checkbox></td>
+            <th style="width: 200px;">Barbiturates</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Barbiturates_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Barbiturates_no"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Cocaine</th>
-            <td><mat-checkbox formControlName="Cocaine_yes"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Cocaine_no"></mat-checkbox></td>
+            <th style="width: 200px;">Cocaine</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Cocaine_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Cocaine_no"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Hallucinogens</th>
-            <td><mat-checkbox formControlName="Hallucinogens_yes"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Hallucinogens_no"></mat-checkbox></td>
+            <th style="width: 200px;">Hallucinogens</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Hallucinogens_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Hallucinogens_no"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Heroin</th>
-            <td><mat-checkbox formControlName="Heroin_yes"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Heroin_no"></mat-checkbox></td>
+            <th style="width: 200px;">Heroin</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Heroin_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Heroin_no"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>LSD</th>
-            <td><mat-checkbox formControlName="LSD_yes"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="LSD_no"></mat-checkbox></td>
+            <th style="width: 200px;">LSD</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="LSD_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="LSD_no"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Marijuana</th>
-            <td><mat-checkbox formControlName="Marijuana_yes"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Marijuana_no"></mat-checkbox></td>
+            <th style="width: 200px;">Marijuana</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Marijuana_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Marijuana_no"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Narcotics</th>
-            <td><mat-checkbox formControlName="Narcotics_yes"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Narcotics_no"></mat-checkbox></td>
+            <th style="width: 200px;">Narcotics</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Narcotics_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Narcotics_no"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Opiates</th>
-            <td><mat-checkbox formControlName="Opiates_yes"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Opiates_no"></mat-checkbox></td>
+            <th style="width: 200px;">Opiates</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Opiates_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Opiates_no"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>PCP</th>
-            <td><mat-checkbox formControlName="PCP_yes"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="PCP_no"></mat-checkbox></td>
+            <th style="width: 200px;">PCP</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="PCP_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="PCP_no"></mat-checkbox></td>
           </tr>
         </table>
       </tr>
       <br>
       <tr>
+        <mat-label><b>42. How frequently do you drink alcoholic beverages?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>How frequently do you drink alcoholic beverages?</mat-label>
           <input matInput formControlName="alcoholic">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>43. Will you be able to abstain from alcohol throughout your surrogacy journey?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Will you be able to abstain from alcohol throughout your surrogacy journey?</mat-label>
           <textarea matInput formControlName="explain_alcohol" maxlength="5000"></textarea>
@@ -560,8 +595,8 @@
       </tr>
       <tr>
         <div class="add-bottom-padding">
-          <label>Do you smoke?</label><br><br>
-          <mat-radio-group formControlName="smoke">
+          <label><b>44. Do you smoke?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="smoke">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
@@ -569,8 +604,8 @@
       </tr>
       <br>
       <tr>
-        <mat-label><b>Past or present history of the following:</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>45. Past or present history of the following:</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>Yes / No</th>
@@ -604,8 +639,8 @@
       <br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you had asthmatic symptoms during pregnancy that required treatment?</label><br><br>
-          <mat-radio-group formControlName="asthmatic">
+          <label><b>46. Have you had asthmatic symptoms during pregnancy that required treatment?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="asthmatic">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
@@ -614,8 +649,8 @@
       <br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you ever taken medication for gestational diabetes?</label><br><br>
-          <mat-radio-group formControlName="gestational">
+          <label><b>47. Have you ever taken medication for gestational diabetes?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="gestational">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
@@ -624,8 +659,8 @@
       <br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you had symptoms of migraine headaches during pregnancy that required treatment?</label><br><br>
-          <mat-radio-group formControlName="migraine">
+          <label><b>48. Have you had symptoms of migraine headaches during pregnancy that required treatment?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="migraine">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
@@ -633,212 +668,213 @@
       </tr>
       <br>
       <tr>
-        <mat-label><b>Any major GYN surgeries involving reproductive organs?</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>49. Any major GYN surgeries involving reproductive organs?</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
-            <th></th>
-            <th>Yes</th>
-            <th>No</th>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Yes</th>
+            <th style="width: 200px;">No</th>
           </tr>
           <tr>
-            <th>Ovarian Cystectomy</th>
-            <td><mat-checkbox formControlName="Ovarian_Cystectomy_yes"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Ovarian_Cystectomy_no"></mat-checkbox></td>
+            <th style="width: 200px;">Ovarian Cystectomy</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Ovarian_Cystectomy_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Ovarian_Cystectomy_no"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Fibroid Removal</th>
-            <td><mat-checkbox formControlName="Fibroid_Removal_yes"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Fibroid_Removal_no"></mat-checkbox></td>
+            <th style="width: 200px;">Fibroid Removal</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Fibroid_Removal_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Fibroid_Removal_no"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Salpingectomy</th>
-            <td><mat-checkbox formControlName="Salpingectomy_yes"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Salpingectomy_no"></mat-checkbox></td>
+            <th style="width: 200px;">Salpingectomy</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Salpingectomy_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Salpingectomy_no"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Oophorectomy</th>
-            <td><mat-checkbox formControlName="Oophorectomy_yes"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Oophorectomy_no"></mat-checkbox></td>
+            <th style="width: 200px;">Oophorectomy</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Oophorectomy_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Oophorectomy_no"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Other (please specify)</th>
-            <td><mat-checkbox formControlName="Other_yes"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Other_no"></mat-checkbox></td>
-          </tr>
-        </table>
-      </tr>
-      <br>
-      <tr>
-        <mat-label><b>Are you or your partner/spouse currently diagnosed with:</b></mat-label><br><br>
-        <table id="customers">
-          <tr>
-            <th></th>
-            <th>Myself</th>
-            <th>My Partner</th>
-            <th>Neither</th>
-          </tr>
-          <tr>
-            <th>AIDS</th>
-            <td><mat-checkbox formControlName="AIDS_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="AIDS_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="AIDS_None"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Genital Warts</th>
-            <td><mat-checkbox formControlName="Genital_Warts_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Genital_Warts_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Genital_Warts_None"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Hepatitis B</th>
-            <td><mat-checkbox formControlName="Hepatitis_B_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Hepatitis_B_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Hepatitis_B_None"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Hepatitis C</th>
-            <td><mat-checkbox formControlName="Hepatitis_C_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Hepatitis_C_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Hepatitis_C_None"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Herpes</th>
-            <td><mat-checkbox formControlName="Herpes_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Herpes_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Herpes_None"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>HIV</th>
-            <td><mat-checkbox formControlName="HIV_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="HIV_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="HIV_None"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>HPV</th>
-            <td><mat-checkbox formControlName="HPV_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="HPV_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="HPV_None"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Syphilis</th>
-            <td><mat-checkbox formControlName="Syphilis_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Syphilis_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Syphilis_None"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Trichomonas</th>
-            <td><mat-checkbox formControlName="Trichomonas_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Trichomonas_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Trichomonas_None"></mat-checkbox></td>
+            <th style="width: 200px;">Other (please specify)</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Other_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Other_no"></mat-checkbox></td>
           </tr>
         </table>
       </tr>
       <br>
       <tr>
-        <mat-label><b>Within the last year, have you or your partner/spouse been diagnosed with the following:</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>50. Are you or your partner/spouse currently diagnosed with:</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
-            <th></th>
-            <th>Myself</th>
-            <th>My Partner</th>
-            <th>Neither</th>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Myself</th>
+            <th style="width: 200px;">My Partner</th>
+            <th style="width: 200px;">Neither</th>
           </tr>
           <tr>
-            <th>Chlamydia</th>
-            <td><mat-checkbox formControlName="Chlamydia_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Chlamydia_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Chlamydia_None"></mat-checkbox></td>
+            <th style="width: 200px;">AIDS</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="AIDS_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="AIDS_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="AIDS_None"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Gonorrhea</th>
-            <td><mat-checkbox formControlName="Gonorrhea_Warts_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Gonorrhea_Warts_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Gonorrhea_Warts_None"></mat-checkbox></td>
+            <th style="width: 200px;">Genital Warts</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Genital_Warts_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Genital_Warts_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Genital_Warts_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Hepatitis B</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Hepatitis_B_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Hepatitis_B_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Hepatitis_B_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Hepatitis C</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Hepatitis_C_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Hepatitis_C_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Hepatitis_C_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Herpes</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Herpes_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Herpes_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Herpes_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">HIV</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="HIV_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="HIV_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="HIV_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">HPV</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="HPV_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="HPV_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="HPV_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Syphilis</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Syphilis_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Syphilis_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Syphilis_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Trichomonas</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Trichomonas_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Trichomonas_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Trichomonas_None"></mat-checkbox></td>
           </tr>
         </table>
       </tr>
       <br>
       <tr>
+        <mat-label><b>51. Within the last year, have you or your partner/spouse been diagnosed with the following:</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
+          <tr>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Myself</th>
+            <th style="width: 200px;">My Partner</th>
+            <th style="width: 200px;">Neither</th>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Chlamydia</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Chlamydia_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Chlamydia_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Chlamydia_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Gonorrhea</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Gonorrhea_Warts_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Gonorrhea_Warts_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Gonorrhea_Warts_None"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>52. Are you currently covered by medical insurance? If so, who is your provider? (If not applicable, put N/A)</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Are you currently covered by medical insurance? If so, who is your provider? (If not applicable, put N/A)</mat-label>
           <input matInput formControlName="insurance" maxlength="500">
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>What is your ethnic heritage? (Check all that apply)</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>53. What is your ethnic heritage? (Check all that apply)</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
-            <th></th>
-            <th>Mother's Side</th>
-            <th>Father's Side</th>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Mother's Side</th>
+            <th style="width: 200px;">Father's Side</th>
           </tr>
           <tr>
-            <th>Asian</th>
-            <td><mat-checkbox formControlName="Asian_mother"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Asian_father"></mat-checkbox></td>
+            <th style="width: 200px;">Asian</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Asian_mother"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Asian_father"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Black or African American</th>
-            <td><mat-checkbox formControlName="Black_mother"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Black_father"></mat-checkbox></td>
+            <th style="width: 200px;">Black or African American</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Black_mother"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Black_father"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Hispanic or Latino</th>
-            <td><mat-checkbox formControlName="Latino_mother"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Latino_father"></mat-checkbox></td>
+            <th style="width: 200px;">Hispanic or Latino</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Latino_mother"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Latino_father"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Native American</th>
-            <td><mat-checkbox formControlName="Native_mother"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Native_father"></mat-checkbox></td>
+            <th style="width: 200px;">Native American</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Native_mother"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Native_father"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>German</th>
-            <td><mat-checkbox formControlName="German_mother"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="German_father"></mat-checkbox></td>
+            <th style="width: 200px;">German</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="German_mother"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="German_father"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>French</th>
-            <td><mat-checkbox formControlName="French_mother"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="French_father"></mat-checkbox></td>
+            <th style="width: 200px;">French</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="French_mother"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="French_father"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Irish</th>
-            <td><mat-checkbox formControlName="Irish_mother"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Irish_father"></mat-checkbox></td>
+            <th style="width: 200px;">Irish</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Irish_mother"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Irish_father"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Italian</th>
-            <td><mat-checkbox formControlName="Italian_mother"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Italian_father"></mat-checkbox></td>
+            <th style="width: 200px;">Italian</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Italian_mother"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Italian_father"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Pacific Islander</th>
-            <td><mat-checkbox formControlName="Pacific_mother"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Pacific_father"></mat-checkbox></td>
+            <th style="width: 200px;">Pacific Islander</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Pacific_mother"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Pacific_father"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Cherokee</th>
-            <td><mat-checkbox formControlName="Cherokee_mother"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Cherokee_father"></mat-checkbox></td>
+            <th style="width: 200px;">Cherokee</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Cherokee_mother"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Cherokee_father"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Caucasian</th>
-            <td><mat-checkbox formControlName="Caucasian_mother"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Caucasian_father"></mat-checkbox></td>
+            <th style="width: 200px;">Caucasian</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Caucasian_mother"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Caucasian_father"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Other</th>
-            <td><mat-checkbox formControlName="Other_mother"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Other_father"></mat-checkbox></td>
+            <th style="width: 200px;">Other</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Other_mother"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Other_father"></mat-checkbox></td>
           </tr>
         </table>
       </tr>
       <br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Due to tribal laws, we need to ascertain whether or not you (or any immediate family members) have Native American heritage. Is anyone in your immediate family affiliated with any tribes or reservations?</label><br><br>
-          <mat-radio-group formControlName="tribal">
+          <label><b>54. Due to tribal laws, we need to ascertain whether or not you (or any immediate family members) have Native American heritage. Is anyone in your immediate family affiliated with any tribes or reservations?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="tribal">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
@@ -846,6 +882,7 @@
       </tr>
       <br>
       <tr>
+        <mat-label><b>55. What is your highest level of completed education?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>What is your highest level of completed education?</mat-label>
           <mat-select formControlName="highest_level_education">
@@ -868,6 +905,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>56. Occupation, if employed</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Occupation, if employed</mat-label>
           <input matInput formControlName="Occupation">
@@ -875,8 +913,8 @@
       </tr>
       <tr>
         <div class="add-bottom-padding">
-          <label>Will you be able to attend OB appointments and other appointments related to the surrogacy journey with your current work schedule?</label><br><br>
-          <mat-radio-group formControlName="appointments">
+          <label><b>57. Will you be able to attend OB appointments and other appointments related to the surrogacy journey with your current work schedule?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="appointments">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
@@ -885,8 +923,8 @@
       <br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Are you exposed to severe levels of smoke at your place of work or at your home?</label><br><br>
-          <mat-radio-group formControlName="exposed">
+          <label><b>58. Are you exposed to severe levels of smoke at your place of work or at your home?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="exposed">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
@@ -894,12 +932,14 @@
       </tr>
       <br>
       <tr>
+        <mat-label><b>59. If yes, please explain</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>If yes, please explain</mat-label>
           <textarea matInput formControlName="explain_exposed" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>60. Do you have a valid drivers license?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Do you have a valid drivers license?</mat-label>
           <mat-select formControlName="drivers_license">
@@ -910,6 +950,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>61. Do you have reliable transportation?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Do you have reliable transportation?</mat-label>
           <mat-select formControlName="transportation">
@@ -920,8 +961,8 @@
         </mat-form-field>
       </tr>
       <tr [formGroup]="Form2">
-        <mat-label><b>List all of your residences within the last 5 years</b></mat-label><br><br>
-        <table id="customers" formGroupName="residences">
+        <mat-label><b>62. List all of your residences within the last 5 years</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers" formGroupName="residences">
           <ng-container *ngIf="Form2.controls.residences!=null">
             <div *ngFor="let residence of Form2.controls.residences.controls; let i=index" [formGroupName]="i">
               <tr>
@@ -935,22 +976,25 @@
           </ng-container>
         </table>
         <br>
-        <button mat-raised-button color="Primary" type="button" (click)="addNewRow2()" [disabled]="Form2.invalid">Add More</button>
+        <button style="margin-left: 25px;" mat-raised-button color="Primary" type="button" (click)="addNewRow2()" [disabled]="Form2.invalid">Add More</button>
       </tr>
       <br>
       <tr>
+        <mat-label><b>63. What does your partner/spouse do for a living?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>What does your partner/spouse do for a living?</mat-label>
           <input matInput formControlName="living" maxlength="500">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>64. Are you currently in a relationship?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Are you currently in a relationship?</mat-label>
           <input matInput formControlName="relationship" maxlength="500">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>65. What is your legal marital status?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>What is your legal marital status?</mat-label>
           <mat-select formControlName="marital_status">
@@ -966,23 +1010,25 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>66. Please list everyone living in your home, including age and relation to you:</b></mat-label><br>
         <mat-form-field appearance="outline">
-          <mat-label>Please list everyone living in your home, including age and relation to you:</mat-label>
+          <mat-label>Please list everyone living in your home, including age and relation to you</mat-label>
           <textarea matInput formControlName="living_home" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>67. Who will be your main support person through your surrogacy?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Who will be your main support person through your surrogacy?</mat-label>
           <input matInput formControlName="support">
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>Please complete the following:</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>68. Please complete the following:</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
-            <th>Yes / No</th>
+            <th>Yes/No</th>
           </tr>
           <tr>
             <th>Do you currently have any major legal cases or claims pending?</th>
@@ -1000,12 +1046,14 @@
       </tr>
       <br>
       <tr>
+        <mat-label><b>69. What is your full legal name?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>What is your full legal name?</mat-label>
           <input matInput formControlName="legal_name">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>70. Please list any other complete names you have used in the past, including maiden name. Enter "n/a" if you haven't used any other names</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Please list any other complete names you have used in the past, including maiden name. Enter "n/a" if you haven't used any other names</mat-label>
           <textarea matInput formControlName="complete_names" maxlength="500"></textarea>
@@ -1013,8 +1061,8 @@
       </tr>
       <tr>
         <div class="add-bottom-padding">
-          <label>Are you exposed to severe levels of smoke at your place of work or at your home?</label><br><br>
-          <mat-radio-group formControlName="exposed">
+          <label><b>71. Are you exposed to severe levels of smoke at your place of work or at your home?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="exposed">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
@@ -1022,6 +1070,7 @@
       </tr>
       <br>
       <tr>
+        <mat-label><b>72. Have you ever been convicted of a felony?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Have you ever been convicted of a felony?</mat-label>
           <mat-select [formControl]="felony" required>
@@ -1033,6 +1082,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>73. Has your partner/spouse ever been convicted of a felony?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Has your partner/spouse ever been convicted of a felony?</mat-label>
           <mat-select [formControl]="partner_felony" required>
@@ -1044,11 +1094,10 @@
         </mat-form-field>
       </tr>
     </td>
-    <!-- <td style="padding: 50px;">
-    </td> -->
+
   </table>
   <div style="margin-left: 30px;" class="button-row">
-    <button mat-raised-button class="my-class" color="warn" type="save_progress">SAVE PROGRESS <mat-icon>save</mat-icon></button>
-    <button mat-raised-button class="my-class" color="warn" type="submit" [disabled]="!gcform2.valid">SUBMIT <mat-icon>task_alt</mat-icon></button>
+    <button style="margin-left: 25px;" mat-raised-button class="my-class" color="warn" type="save_progress">SAVE PROGRESS <mat-icon>save</mat-icon></button>
+    <button style="margin-left: 25px;" mat-raised-button class="my-class" color="warn" type="submit" [disabled]="!gcform2.valid">SUBMIT <mat-icon>task_alt</mat-icon></button>
   </div>
 </form>
