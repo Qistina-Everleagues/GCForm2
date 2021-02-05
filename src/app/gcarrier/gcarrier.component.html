@@ -1041,20 +1041,24 @@
         <mat-label><b>67. Please complete the following:</b></mat-label><br><br>
         <table style="margin-left: 25px;" id="customers">
           <tr>
-            <th></th>
-            <th>Yes/No</th>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Yes</th>
+            <th style="width: 200px;">No</th>
           </tr>
           <tr>
-            <th>Do you currently have any major legal cases or claims pending?</th>
-            <td><input matInput formControlName="legal_cases" maxlength="50"></td>
+            <th style="width: 200px;">Do you currently have any major legal cases or claims pending?</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="legal_cases_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="legal_cases_no"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Have you had any active restraining orders in the last year?</th>
-            <td><input matInput formControlName="restraining" maxlength="50"></td>
+            <th style="width: 200px;">Have you had any active restraining orders in the last year?</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="restraining_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="restraining_no"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Are you currently filing for divorce or legal separation?</th>
-            <td><input matInput formControlName="divorce" maxlength="50"></td>
+            <th style="width: 200px;">Are you currently filing for divorce or legal separation?</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="divorce_yes"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="divorce_no"></mat-checkbox></td>
           </tr>
         </table>
       </tr>
