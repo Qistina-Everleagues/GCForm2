@@ -119,7 +119,6 @@ export class GcarrierComponent implements OnInit {
     address: new FormControl(''),
     city: new FormControl(''),
     state: new FormControl(0),
-    foreign: new FormControl(''),
     outside_USA: new FormControl(''),
     zip_code: new FormControl(''),
     birthDate: new FormControl(''),
